@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+ 
+}
+
+h1 {
+  margin: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.body-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  margin:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-item {
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  background-color: rgb(223, 198, 247);
+}
+
+.main-item {
+ flex-grow: 1;
+  background-color: rgb(223, 198, 247);
+}
+
+.main-wrapper-item {
+  display: flex;
+  flex-shrink: 1;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  font-size: 24px;
+  background-color: rgb(65, 22, 105);
+}
+
+.main-wrapper-item:hover {
+  cursor: pointer;
+  animation-name: cube;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+}
+
+@keyframes cube {
+  100% {
+    transform: rotatez(180deg);
+  }
+}
+
+.navigation-wrapper {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.navigation-item {
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  list-style-type: none;
+  background-color: rgb(127, 195, 158);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.navigation-item:hover {
+  cursor: pointer;
+  background-color: rgb(206, 155, 27);
+  color: rgb(0, 0, 0);
+  transform: scale3d(120%, 120%, 120%);
+  transition: linear;
+  transition-duration: 1s;
+  font-size: 17px;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  background-color: rgb(65, 22, 105);
+  border-radius: 50%;
+  animation-name: circleAnimation;
+  animation-duration: 7s;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes circleAnimation {
+  0% {
+    transform: translate(-600px, -50px);
+    background-color: magenta;
+  }
+
+  11% {
+    transform: translate(-460px, 0);
+    background-color: blue;
+  }
+
+  22% {
+    transform: translate(-330px, -50px);
+    background-color: mediumseagreen;
+  }
+
+  33% {
+    transform: translate(-200px, 0);
+    background-color: grey;
+  }
+
+  45% {
+    transform: translate(-70px, -50px);
+    background-color: pink;
+  }
+
+  55% {
+    transform: translate(+70px, 0);
+    background-color: red;
+  }
+  66% {
+    transform: translate(+190px, -50px);
+    background-color: navy;
+  }
+
+  77% {
+    transform: translate(+330px, 0);
+    background-color: green;
+  }
+
+  88% {
+    transform: translate(+460px, -50px);
+    background-color: violet;
+  }
+
+  100% {
+    transform: translate(+600px, 0);
+    background-color: red;
+  }
+}
+
+.circle:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+@media screen and (max-width: 768px){
+  .circle-container {
+
+    padding: 50px;
+    overflow-x: hidden;
+  }
+}
+
+
